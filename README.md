@@ -1,7 +1,5 @@
 # Hand Detection - Ảo thuật cùng thị giác máy tính
 
-Đồ án nhỏ Thị giác máy tính - OpenCV
-
 - Sử dụng thư viện OpenCV của Python
 
 - Hướng dẫn cài đặt:
