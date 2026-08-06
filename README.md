@@ -9,7 +9,5 @@
     .\venv\Scripts\activate
 
 2. Cài đặt các thư viện Python bằng Terminal:
-    pip install opencv-python numpy
-    pip install mediapipe==0.10.21
-    pip install pycaw comtypes==1.1.11
+    pip install -r requirements.txt
 ```
