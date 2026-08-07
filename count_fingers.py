@@ -5,7 +5,7 @@ import hand as htm
 
 if __name__ == "__main__":
     pTime = 0
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) # Sử dụng DirectShow backend (ổn định hơn trên Windows)
 
     folderPath = "./Fingers"
     lst = os.listdir(folderPath)
@@ -20,6 +20,10 @@ if __name__ == "__main__":
     
     while True:
         ret, frame = cap.read()
+        if not ret or frame is None:
+            print("Lỗi: Không thể đọc dữ liệu từ camera. Vui lòng kiểm tra lại webcam!")
+            break
+            
         frame = detector.findHands(frame)
         lmList = detector.findPosition(frame, draw=False) # Phát hiện vị trí
 
