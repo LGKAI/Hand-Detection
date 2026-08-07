@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     final_text = ""
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     cap.set(3, cap.get(3) * 2)
     cap.set(4, cap.get(4) * 2)
     pTime = time.time()
@@ -41,6 +41,10 @@ if __name__ == "__main__":
     
     while True:
         ret, frame = cap.read()
+        if not ret or frame is None:
+            print("Lỗi: Không thể đọc dữ liệu từ camera. Vui lòng kiểm tra lại webcam!")
+            break
+            
         frame = detector.findHands(frame)
         lmList = detector.findPosition(frame, draw=False)
         

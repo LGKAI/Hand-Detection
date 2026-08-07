@@ -7,7 +7,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 if __name__ == "__main__":
     pTime = 0
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     detector = htm.handDetector(detectionCon=0.5)
     
     devices = AudioUtilities.GetSpeakers()
@@ -21,6 +21,10 @@ if __name__ == "__main__":
     
     while True:
         ret, frame = cap.read()
+        if not ret or frame is None:
+            print("Lỗi: Không thể đọc dữ liệu từ camera. Vui lòng kiểm tra lại webcam!")
+            break
+            
         frame = detector.findHands(frame)
         lmList = detector.findPosition(frame, draw=False) # Phát hiện vị trí
 

@@ -46,11 +46,15 @@ class handDetector():
 def main():
     pTime = 0
     cTime = 0
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     detector = handDetector()
     
     while True:
         success, img = cap.read()
+        if not success or img is None:
+            print("Lỗi: Không thể đọc dữ liệu từ camera. Vui lòng kiểm tra lại webcam!")
+            break
+            
         img = detector.findHands(img)
         lmList = detector.findPosition(img)
         if len(lmList) != 0:
