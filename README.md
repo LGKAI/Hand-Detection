@@ -2,7 +2,7 @@
 
 Ứng dụng Computer Vision kết hợp giữa **OpenCV** và **MediaPipe** để phát hiện bàn tay và xây dựng các ứng dụng tương tác không chạm thú vị.
 
-## 1. Hướng Dẫn Cài Đặt
+## ⚙️ Hướng Dẫn Cài Đặt
 
 1. **Tạo và kích hoạt môi trường ảo (khuyến nghị Python 3.11):**
    ```text
@@ -15,7 +15,7 @@
    pip install -r requirements.txt
    ```
 
-## 2. Cấu Trúc Thư Mục
+## 📁 Cấu Trúc Thư Mục
 
 ```text
 Project_Hand-Detection/
@@ -34,7 +34,7 @@ Project_Hand-Detection/
 └── README.md               # Tài liệu hướng dẫn sử dụng dự án
 ```
 
-## 3. Chức Năng 4 File Python
+## 📄 Chức Năng 4 File Python
 
 ### 1. `hand.py` — Module Phát Hiện & Theo Dõi Bàn Tay (Core Module)
 - **Mục đích:** Đóng vai trò là module nền tảng chứa lớp `handDetector`, cung cấp các phương thức nhận diện và trích xuất tọa độ bàn tay cho toàn bộ dự án.
@@ -98,6 +98,6 @@ Project_Hand-Detection/
   python volume.py
   ```
 
-## 4. Lưu Ý Khi Sử Dụng
+## 💡 Lưu Ý Khi Sử Dụng
 - Nhấn phím **`q`** trên bàn phím khi đang ở cửa sổ hiển thị camera để thoát chương trình.
 - Cả 4 ứng dụng đều cấu hình backend `cv2.CAP_DSHOW` giúp khởi động camera nhanh và hoạt động ổn định trên hệ điều hành Windows.
