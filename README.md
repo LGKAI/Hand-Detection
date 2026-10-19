@@ -34,7 +34,7 @@ Project_Hand-Detection/
 └── README.md               # Tài liệu hướng dẫn sử dụng dự án
 ```
 
-## 📄 Chức Năng 4 File Python
+## 📄 Chức Năng 4 File Python & Cách Chạy
 
 ### 1. `hand.py` — Module Phát Hiện & Theo Dõi Bàn Tay (Core Module)
 - **Mục đích:** Đóng vai trò là module nền tảng chứa lớp `handDetector`, cung cấp các phương thức nhận diện và trích xuất tọa độ bàn tay cho toàn bộ dự án.
